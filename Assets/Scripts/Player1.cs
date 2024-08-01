@@ -26,7 +26,7 @@ public class Player1 : MonoBehaviour
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
         if(direction == -1)
         {
-            bullet.transform.localRotation = Quaternion.Euler(0, 0, 130);
+            bullet.transform.localRotation = Quaternion.Euler(0, 0, 135);
 
         } else if(direction == 1)
         {
