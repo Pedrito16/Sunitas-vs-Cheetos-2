@@ -24,10 +24,18 @@ public class Player1 : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+        if(direction == -1)
+        {
+            bullet.transform.localRotation = Quaternion.Euler(0, 0, 130);
 
-        Vector2 scale = bullet.transform.localScale;
+        } else if(direction == 1)
+        {
+
+            bullet.transform.localRotation = Quaternion.Euler(0, 0, -45);
+        }
+        /*Vector2 scale = bullet.transform.;
         scale.x = direction;
-        bullet.transform.localScale = scale;
+        bullet.transform.localScale = scale;*/
 
         footCollision = Physics2D.OverlapCircle(foot.position, 0.05f);
         groundCheck = footCollision;
