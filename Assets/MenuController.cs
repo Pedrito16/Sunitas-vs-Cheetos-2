@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
 
     public void Teleport(string tp)
     {
-            SceneManager.LoadScene(tp);
+        SceneManager.LoadScene(tp);
     }
     public void OpenCreditsBTN()
     {
